@@ -42,3 +42,15 @@ Then("deberia ver una tabla {string} de {int} por {int}") do |string, int, int2|
         last_response.body.should =~ /#{"#"}/m
     end
 end
+
+Given("visito la pagina tablero") do
+    pending # Write code here that turns the phrase above into concrete actions
+  end
+  
+  Given("ingrese instrucciones {string} en el campo {string}") do |string, string2|
+    pending # Write code here that turns the phrase above into concrete actions
+  end
+  
+  Then("deberia mostrar {string}") do |string|
+    pending # Write code here that turns the phrase above into concrete actions
+  end

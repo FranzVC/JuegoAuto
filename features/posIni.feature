@@ -25,3 +25,9 @@ Feature:
     Scenario:
         Given visito la pagina resultado
         Then deberia ver una tabla "Tablero" de 8 por 8
+
+    Scenario:
+        Given visito la pagina tablero
+        And ingrese instrucciones "" en el campo "instrucciones"
+        When presiono el boton "Mover"
+        Then deberia mostrar "La posicion final es: "

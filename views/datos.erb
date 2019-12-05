@@ -1,16 +1,20 @@
 <div align ="center">
 
 <br>
-<div margin = 20px>
+<div>
 El ancho es <%=@ancho%>
 <br>
-
 El alto es <%=@alto%>
 <br>
-
 La posicion inicial es <%=@posIniX%>:<%=@posIniY%>
+<br>
+La orientacion inicial es <%=@orientacion%>
 </div>
-
+<form method='POST' action='/datos'>
+Ingrese instrucciones: 
+ <input type='text' name='instrucciones'>
+ <input type='submit' value='Mover'>
+</form>
 <br>
 <br>
 
