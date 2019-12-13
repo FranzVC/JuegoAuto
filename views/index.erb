@@ -1,6 +1,24 @@
-<h1> Bienvenido al juego </h1>
-<form method='post' action='/formulario'>
- Ingrese Cantidad de Autos
- <input type='text' name='cantAutos'>
- <input type='submit' value='Empezar A Jugar'>
+<h1 align="center"> Bienvenido al juego </h1>
+<form method='post' action='/formulario' align="center">
+  Ingrese cantidad de tablero
+  <select name="sizes" id = "sizes">
+    <option value="1" selected >1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+  </select>
+  <br>
+  <br>
+  Ingrese dimensiones de tablero
+  <select name="sizes" id = "sizes">
+    <option value="5">5x5</option>
+    <option value="6">6x6</option>
+    <option value="7">7x7</option>
+    <option value="8" selected >8x8</option>
+    <option value="9">9x9</option>
+    <option value="10">10x10</option>
+  </select>
+  <input type='submit' value='Empezar A Jugar'>
 </form>
