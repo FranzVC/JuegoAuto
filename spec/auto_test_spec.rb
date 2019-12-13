@@ -39,5 +39,45 @@ RSpec.describe Auto do
         expect(auto.avanzar()). to eq 3
     end
 
+    it 'deberia devolver S para D' do
+        auto=Auto.new
+        auto.setOrientacion('E')
+        expect(auto.cambiarOrientacion('D')). to eq("S")
+    end
+
+    it 'deberia devolver N para I' do
+        auto=Auto.new
+        auto.setOrientacion('E')
+        expect(auto.cambiarOrientacion('I')). to eq("N")
+    end
+
+    it 'deberia devolver O para I' do
+        auto=Auto.new
+        auto.setOrientacion('N')
+        expect(auto.cambiarOrientacion('I')). to eq("O")
+    end
+
+    it 'deberia devolver E para D' do
+        auto=Auto.new
+        auto.setOrientacion('N')
+        expect(auto.cambiarOrientacion('D')). to eq("E")
+    end
+
+    
+
+    it 'deberia devolver S para I' do
+        auto=Auto.new
+        auto.setOrientacion('O')
+        expect(auto.cambiarOrientacion('I')). to eq("S")
+    end
+
+    it 'deberia devolver N para D' do
+        auto=Auto.new
+        auto.setOrientacion('O')
+        expect(auto.cambiarOrientacion('D')). to eq("N")
+    end
+
+
+
     
 end
