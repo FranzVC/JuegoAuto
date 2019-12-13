@@ -28,9 +28,10 @@
   <br>
   <% for index in 1..@cantidad_de_autos.to_i %>
     <label>Auto #<%=index%></label>
-    <input id ="auto<%=index%>" name="auto<%=index%>" type="text" placeholder="nombre">
-    <input id ="auto<%=index%>" name="auto<%=index%>" type="text" placeholder="posicion en X">
-    <input id ="auto<%=index%>" name="auto<%=index%>" type="text" placeholder="posicion en Y">
+    <input id ="orientacion<%=index%>" name="orientacion<%=index%>" type="text" placeholder="orientacion">
+    <input id ="posx<%=index%>" name="posx<%=index%>" type="text" placeholder="posicion en X">
+    <input id ="poxy<%=index%>" name="posy<%=index%>" type="text" placeholder="posicion en Y">
+
     <br>
     <br>
   <% end %>
