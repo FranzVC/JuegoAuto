@@ -1,18 +1,30 @@
 <body style="background-color:Grey;;color:White;">
-<h1>Bienvenido al juego</h1>
-La cantidad de Autos es  <%=@cantAutos%>
-    <div id="tablero" >
-<br><br>
-        <% for i in 1..@size %>
-            <h5 style="color:#006E6D; left: <%=(100*i)+10%>px; top: 30px; position: absolute"><%=i%></h5>
-        <% end %>
-        <% for i in 1..@size %>
-            <h5 style="color:#006E6D; left: 50px; top:<%=(100*i)-15%>px; position: absolute"><%=i%></h5>
-        <% end %>
+  <h1>Bienvenido al juego</h1>
+  La cantidad de Autos es  <%=@cantAutos%>
+  <div id="tablero" >
+    <br>
+    <br>
+    <% for i in 1..@size %>
+      <h5 style="color:#006E6D; left: <%=(100*i)+10%>px; top: 30px; position: absolute"><%=i%></h5>
+    <% end %>
+    <% for i in 1..@size %>
+      <h5 style="color:#006E6D; left: 50px; top:<%=(100*i)-15%>px; position: absolute"><%=i%></h5>
+    <% end %>
+    <form method='post' action='/mover' align="center">
+      Elija vehiculo
+      <select name="autosDisp" id = "autosDisp">>
         <% @tablero.getAutos.each do |a|  %>
-        <%=a.getPosX%>
-        <%=a.getPosY%>
-            <h5 style="color:#006E6D; left: <%=(200*a.getPosX)%>px; top:<%=(200*a.getPosY)%>px; position: absolute"><%=(a.getNombre)%></h5>
+          <option value=<%=a.getNombre%>><%=a.getNombre%></option>
         <% end %>
-    </div>
+      </select>
+      <input id ="instruccion" name="instruccion" type="text" placeholder="ingrese instruccion">
+      <input type="submit" value="mover" name="btn_crear" id="btn_crear">
+      <br>
+      <br>
+    </form>
+    <% @tablero.getAutos.each do |a|  %>
+    <%=%>
+      <h5 style="color:#ffffff; left: <%=(98*a.getPosX)%>px; top:<%=(98*a.getPosY)%>px; position: absolute"><%=a.getNombre%></h5>
+    <% end %>
+  </div>
 </body>

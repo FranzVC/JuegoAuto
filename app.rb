@@ -18,7 +18,7 @@ post '/tablero' do
         tmp_orientacion = 'orientacion' + i.to_s
         tmp_pos_x = 'posx' + i.to_s
         tmp_pos_y = 'posy' + i.to_s
-        tmp_nombre = 'nombre' + i.to_s
+        tmp_nombre = 'auto' + i.to_s
         @posX = params[tmp_pos_x]
         @posY = params[tmp_pos_y]
         @nombre = tmp_nombre
@@ -35,4 +35,7 @@ end
 post '/cantAutos' do
     $cantidad_de_autos = params[:autos]
     redirect "/"
+end
+
+post '/mover' do 
 end
