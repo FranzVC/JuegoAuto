@@ -51,13 +51,13 @@ class Auto
 
     def avanzar()
         if (@orientacion == 'N') 
-            @posY = posY - 1
+           @posY-=1
         elsif(@orientacion == 'S')
-            @posY = posY + 1
+            @posY+=1
         elsif(@orientacion == 'E')
-            @posX = posX + 1
+            @posX+=1
         elsif(@orientacion == 'O')
-            @posX = posX - 1    
+            @posX-=1    
         end
     end
 

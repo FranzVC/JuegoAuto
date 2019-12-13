@@ -16,15 +16,27 @@ RSpec.describe Auto do
     end
 
 
-    it 'deberia devolver O para I' do
+    it 'deberia devolver E para I' do
         auto=Auto.new
         expect(auto.cambiarOrientacion('I')). to eq ("E")
     end
 
-    it 'deberia devolver 2 en Y para A' do
+    it 'deberia devolver O para D' do
+        auto=Auto.new
+        expect(auto.cambiarOrientacion('D')). to eq ("O")
+    end
+
+
+    it 'deberia devolver 3 en Y para A' do
         auto=Auto.new
         auto.avanzar()
-        expect(auto.getPosY()). to eq 2
+        expect(auto.avanzar()). to eq 3
+    end
+
+    it 'deberia devolver 3 en X para A' do
+        auto=Auto.new
+        auto.avanzar()
+        expect(auto.avanzar()). to eq 3
     end
 
     

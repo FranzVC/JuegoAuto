@@ -5,15 +5,15 @@ class Tablero
         @vecAutos = Array.new(5)
     end
 
-    def dimX()
+    def getDimX()
         @dimX
     end
 
-    def dimY()
+    def getDimY()
         @dimY
     end
 
-    def vecAutos()
+    def getVecAutos()
         @vecAutos
     end
 
