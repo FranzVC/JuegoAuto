@@ -1,17 +1,16 @@
-<body style="background-color:Black;border:2px solid Tomato;color:White;">
+<body style="background-color:Grey;;color:White;">
 <h1>Bienvenido al juego</h1>
 La cantidad de Autos es  <%=@cantAutos%>
-
-
-<div id="tablero" >
-                <% for i in 1..@size %>
-                    <h5 style="color:#006E6D; left: <%=(100*i)+10%>px; top: 30px; position: absolute"><%=i%></h5>
-                <% end %>
-                <% for i in 1..@size %>
-                    <h5 style="color:#006E6D; left: 50px; top:<%=(100*i)-15%>px; position: absolute"><%=i%></h5>
-                <% end %>
-
-                <>
-        </div>
-
+<br><br>
+    <div id="tablero" >
+        <% for i in 1..@size %>
+            <h5 style="color:#006E6D; left: <%=(100*i)+10%>px; top: 30px; position: absolute"><%=i%></h5>
+        <% end %>
+        <% for i in 1..@size %>
+            <h5 style="color:#006E6D; left: 50px; top:<%=(100*i)-15%>px; position: absolute"><%=i%></h5>
+        <% end %>
+        <% @tablero.getAutos.each do |a|  %>
+            <h5 style="color:#006E6D; left: <%=(200*a.getPosX)%>2px; top:<%=(200*a.getPosY)%>2px; position: absolute">AUTO</h5>
+        <% end %>
+    </div>
 </body>

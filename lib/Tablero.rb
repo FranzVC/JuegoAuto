@@ -1,8 +1,14 @@
+require './lib/Auto'
+
 class Tablero
     def initialize()
         @dimX=3
         @dimY=3
-        @vecAutos = Array.new(5)
+        @vecAutos = Array[]
+    end
+
+    def vecAutos()
+        @vecAutos
     end
 
     def getDimX()
@@ -13,10 +19,15 @@ class Tablero
         @dimY
     end
 
-    def getVecAutos()
-        @vecAutos
+    def addAuto(posX, posY, orientacion)
+        auto = Auto.new
+        auto.setOrientacion(@orientacion)
+        auto.setPosX(@posX.to_i)
+        auto.setPosY(@posY.to_i)
+        @vecAutos.push(auto)
     end
-
-    def mostrarTablero()
+    
+    def getAutos
+        return @vecAutos
     end
 end
