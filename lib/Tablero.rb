@@ -28,7 +28,7 @@ class Tablero
         @vecAutos.push(auto)
     end
     
-    def getAutos
+    def getAutos()
         return @vecAutos
     end
 end

@@ -2,6 +2,8 @@ require 'sinatra'
 require './lib/Tablero'
 
 $cantidad_de_autos = 1
+$tablero = Tablero.new
+
 
 get '/' do
     @cantidad_de_autos = $cantidad_de_autos
@@ -9,7 +11,7 @@ get '/' do
 end
 
 post '/tablero' do
-    @tablero = Tablero.new
+    @tablero = $tablero
     @cantAutos = $cantidad_de_autos.to_i
     @size=params[:sizes].to_i
     for i in 1..@cantAutos do

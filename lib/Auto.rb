@@ -7,11 +7,15 @@ class Auto
     end
 
     def getPosX()
-        @posX
+        return @posX
     end
 
     def getPosY()
-        @posY
+        return @posY
+    end
+
+    def getNombre()
+        return @nombre
     end
 
     def setNombre(n_nombre)

@@ -12,7 +12,7 @@ La cantidad de Autos es  <%=@cantAutos%>
         <% @tablero.getAutos.each do |a|  %>
         <%=a.getPosX%>
         <%=a.getPosY%>
-            <h5 style="color:#006E6D; left: <%=(200*a.getPosX)%>px; top:<%=(200*a.getPosY)%>px; position: absolute"><%=a.getNombre%></h5>
+            <h5 style="color:#006E6D; left: <%=(200*a.getPosX)%>px; top:<%=(200*a.getPosY)%>px; position: absolute"><%=(a.getNombre)%></h5>
         <% end %>
     </div>
 </body>
