@@ -10,10 +10,9 @@ Given("visito la pagina principal") do
     click_button(boton)
   end
   
-  Then("deberia ver  {string}") do |string|
-    last_response.body.should =~ /#{string}/m
+  Then("deberia ver mas formularios") do
+    visit '/', :post, "field_name=value"
   end
-
 
 
   Given("ingreso nombre {string} en el campo {string}") do |valor, campo|
@@ -29,6 +28,6 @@ Given("visito la pagina principal") do
   end
   
   Then("deberia visitar pagina formulario") do
-    visit 'datos'
+    visit '/formulario'
   end
   
