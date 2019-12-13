@@ -10,18 +10,20 @@
     <% for i in 1..@size %>
       <h5 style="color:#006E6D; left: 50px; top:<%=(100*i)-15%>px; position: absolute"><%=i%></h5>
     <% end %>
-    <form method='post' action='/mover' align="center">
+
+    <form method='post' action='' align="right">
       Elija vehiculo
       <select name="autosDisp" id = "autosDisp">>
         <% @tablero.getAutos.each do |a|  %>
-          <option value=<%=a.getNombre%>><%=a.getNombre%></option>
+          <option id=<%=a.getNombre%>><%=a.getNombre%></option>
         <% end %>
       </select>
       <input id ="instruccion" name="instruccion" type="text" placeholder="ingrese instruccion">
-      <input type="submit" value="mover" name="btn_crear" id="btn_crear">
+      <input type="submit" value="mover" name="btn_crear" id="btn_crear" disabled="disabled">
       <br>
       <br>
     </form>
+
     <% @tablero.getAutos.each do |a|  %>
     <%=%>
       <h5 style="color:#ffffff; left: <%=(98*a.getPosX)%>px; top:<%=(98*a.getPosY)%>px; position: absolute"><%=a.getNombre%></h5>

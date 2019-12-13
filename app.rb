@@ -2,7 +2,6 @@ require 'sinatra'
 require './lib/Tablero'
 
 $cantidad_de_autos = 1
-$tablero = Tablero.new
 
 
 get '/' do
@@ -11,7 +10,7 @@ get '/' do
 end
 
 post '/tablero' do
-    @tablero = $tablero
+    @tablero = Tablero.new
     @cantAutos = $cantidad_de_autos.to_i
     @size=params[:sizes].to_i
     for i in 1..@cantAutos do
@@ -38,4 +37,15 @@ post '/cantAutos' do
 end
 
 post '/mover' do 
+    @nombre = params[:autosDisp]
+    @instruccion = params[:instruccion]
+    puts @instruccion
+    puts @nombre
+
+    $tablero.getAutos.each do |a|
+        if (a.getNombre == @nombre)
+            a.seguirInstruccion(instruccion)
+        end
+    end
+    erb :tablero
 end

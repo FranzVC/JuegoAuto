@@ -5,7 +5,6 @@ class Auto
         @orientacion='S'
         @nombre="salmonela"
 
-        
     end
 
     def getPosX()
@@ -45,6 +44,7 @@ class Auto
 
     def seguirInstruccion(instruccion)
         chars = instruccion.chars
+        puts chars
         chars.each do |c|
             if (c == 'A')
                 avanzar()

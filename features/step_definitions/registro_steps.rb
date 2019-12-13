@@ -1,6 +1,10 @@
 Given("visito la pagina principal") do
   visit '/'
   end
+
+  Then("deberia visitar el tablero") do 
+    visit '/tablero'
+  end
   
   Given("ingreso cantidad de autos {string} en el campo {string}") do |valor, campo|
     fill_in(campo, :with => valor)
