@@ -18,6 +18,17 @@ class Auto
         @orientacion
     end
 
+    def seguirInstruccion(instruccion)
+        chars = instruccion.chars
+        chars.each do |c|
+            if (c == 'A')
+                avanzar()
+            elsif (c == 'I' || c=='D')
+                cambiarOrientacion(c)
+            end
+        end
+    end
+
     def cambiarOrientacion(direccion)
         if (@orientacion == 'N') 
             if(direccion=='I')
