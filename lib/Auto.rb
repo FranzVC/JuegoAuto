@@ -13,9 +13,20 @@ class Auto
     def getPosY()
         @posY
     end
+    
+    def setPosX(pos_x)
+        @posX = pos_x
+    end
+
+    def setPosY(pos_y)
+        @posY = pos_y
+    end
 
     def getOrientacion()
         @orientacion
+    end
+    def setOrientacion(orientacion)
+        @orientacion = orientacion
     end
 
     def seguirInstruccion(instruccion)
