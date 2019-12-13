@@ -1,8 +1,15 @@
 require 'sinatra'
 
 get '/' do
+    erb :index
+end
+
+post '/formulario' do
+    @cantAutos=params[:cantAutos]
     erb :formulario
 end
+
+
 
 post '/datos' do
     @ancho=params[:ancho]
@@ -20,15 +27,5 @@ def moverAuto()
     @instrucciones = params[:instrucciones]
     puts instrucciones
 
-    if (@orientacion == 'N') 
-       
-    elsif(@orientacion == 'S')
     
-    elsif(@orientacion == 'E')
-
-    elsif(@orientacion == 'O')
-
-    else
-
-    end
 end
