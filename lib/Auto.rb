@@ -3,6 +3,7 @@ class Auto
         @posX=1
         @posY=1
         @orientacion='S'
+        @nombre="salmonela"
     end
 
     def getPosX()
@@ -24,7 +25,6 @@ class Auto
             elsif (direccion=='D')
                 @orientacion='E'
             end
-
         elsif(@orientacion == 'S')
             if(direccion=='I')
                 @orientacion='E'
@@ -51,13 +51,13 @@ class Auto
 
     def avanzar()
         if (@orientacion == 'N') 
-            self.posY = posY - 1
+            @posY = posY - 1
         elsif(@orientacion == 'S')
-            self.posY = posY + 1
+            @posY = posY + 1
         elsif(@orientacion == 'E')
-            self.posX = posX + 1
+            @posX = posX + 1
         elsif(@orientacion == 'O')
-            self.posX = posX - 1    
+            @posX = posX - 1    
         end
     end
 

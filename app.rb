@@ -1,6 +1,9 @@
 require 'sinatra'
 
+$cantidad_de_autos = 1
+
 get '/' do
+    @cantidad_de_autos = $cantidad_de_autos
     erb :index
 end
 
@@ -9,7 +12,10 @@ post '/formulario' do
     erb :formulario
 end
 
-
+post '/cantAutos' do
+    $cantidad_de_autos = params[:autos]
+    redirect "/"
+end
 
 post '/datos' do
     @ancho=params[:ancho]
@@ -26,6 +32,4 @@ def moverAuto()
     @orientacion = params[:orientacion]
     @instrucciones = params[:instrucciones]
     puts instrucciones
-
-    
 end
