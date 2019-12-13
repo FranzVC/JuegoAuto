@@ -16,11 +16,17 @@ post '/tablero' do
         tmp_orientacion = 'orientacion' + i.to_s
         tmp_pos_x = 'posx' + i.to_s
         tmp_pos_y = 'posy' + i.to_s
-        @posX = params[:tmp_pos_x]
-        @posY = params[:tmp_pos_y]
-        @orientacion = params[:tmp_orientacion]
-        @tablero.addAuto(@posX, @posY, @orientacion)
-    end
+        tmp_nombre = 'nombre' + i.to_s
+        @posX = params[tmp_pos_x]
+        @posY = params[tmp_pos_y]
+        @nombre = tmp_nombre
+        puts @nombre
+        puts @posX
+        puts @posY
+
+        @orientacion = params[tmp_orientacion]
+        @tablero.addAuto(@posX, @posY, @orientacion,@nombre)
+    end 
     erb :tablero
 end
 

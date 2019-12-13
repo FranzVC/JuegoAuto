@@ -13,7 +13,11 @@ class Auto
     def getPosY()
         @posY
     end
-    
+
+    def setNombre(n_nombre)
+        @nombre = n_nombre
+    end
+
     def setPosX(pos_x)
         @posX = pos_x
     end
