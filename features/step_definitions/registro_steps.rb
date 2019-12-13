@@ -14,20 +14,11 @@ Given("visito la pagina principal") do
     visit '/', :post, "field_name=value"
   end
 
+  Given("ingreso {string} en el campo {string}") do |valor ,campo|
+    fill_in(campo, :with => valor)
+  end
+  
 
-  Given("ingreso nombre {string} en el campo {string}") do |valor, campo|
-   fill_in(campo, :with => valor)
+  Then("deberia {string}") do |string|
+    visitar '/formulario'
   end
-  
-  Given("ingreso pos X {string} en el campo {string}") do |valor, campo|
-    fill_in(campo, :with => valor)
-  end
-  
-  Given("ingreso pos Y {string} en el campo {string}") do |valor, campo|
-    fill_in(campo, :with => valor)
-  end
-  
-  Then("deberia visitar pagina formulario") do
-    visit '/formulario'
-  end
-  

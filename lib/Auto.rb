@@ -4,6 +4,8 @@ class Auto
         @posY=1
         @orientacion='S'
         @nombre="salmonela"
+
+        
     end
 
     def getPosX()
@@ -12,6 +14,10 @@ class Auto
 
     def getPosY()
         @posY
+    end
+
+    def getNombre()
+        @nombre
     end
 
     def setNombre(n_nombre)
