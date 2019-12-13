@@ -31,4 +31,6 @@ class Tablero
     def getAutos()
         return @vecAutos
     end
+
+ 
 end

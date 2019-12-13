@@ -10,25 +10,15 @@ Given("visito la pagina principal") do
     click_button(boton)
   end
   
-  Then("deberia ver  {string}") do |string|
-    last_response.body.should =~ /#{string}/m
+  Then("deberia ver mas formularios") do
+    visit '/', :post, "field_name=value"
   end
 
-
-
-  Given("ingreso nombre {string} en el campo {string}") do |valor, campo|
-   fill_in(campo, :with => valor)
-  end
-  
-  Given("ingreso pos X {string} en el campo {string}") do |valor, campo|
+  Given("ingreso {string} en el campo {string}") do |valor ,campo|
     fill_in(campo, :with => valor)
   end
   
-  Given("ingreso pos Y {string} en el campo {string}") do |valor, campo|
-    fill_in(campo, :with => valor)
+
+  Then("deberia {string}") do |string|
+    visitar '/formulario'
   end
-  
-  Then("deberia visitar pagina formulario") do
-    visit 'datos'
-  end
-  
