@@ -19,8 +19,9 @@ class Tablero
         @dimY
     end
 
-    def addAuto(posX, posY, orientacion)
+    def addAuto(posX, posY, orientacion,nombre)
         auto = Auto.new
+        auto.setNombre(@nombre)
         auto.setOrientacion(@orientacion)
         auto.setPosX(@posX.to_i)
         auto.setPosY(@posY.to_i)
